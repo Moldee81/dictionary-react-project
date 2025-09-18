@@ -6,3 +6,10 @@
   display: block;
   margin: 0 auto;
 }
+.App-footer {
+  margin: 30px auto;
+  font-size: smaller;
+}
+.accent {
+  color: rgb(227, 67, 93);
+}
