@@ -14,7 +14,11 @@ function App() {
         </main>
         <footer className="App-footer text-center">
           {" "}
-          Coded by <span className="accent">Anita Peña-Tomczak</span>
+          Coded by <span className="accent">Anita Peña-Tomczak</span> and it's
+          open-sourced on{" "}
+          <a href="https://github.com/Moldee81/dictionary-react-project">
+            GitHub
+          </a>
         </footer>
       </div>
     </div>

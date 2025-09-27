@@ -5,21 +5,27 @@ export default function Meaning(props) {
   return (
     <div className="Meaning">
       <h3>{props.meaning.partOfSpeech}</h3>
-      {props.meaning.definitions.map(function (definition, index) {
-        return (
-          <div key={index}>
-            <p>
-              {props.meaning.definition}
-              {props.meaning.example && (
-                <>
-                  <br />
-                  <em>{props.meaning.example}</em>
-                </>
-              )}
-            </p>
-          </div>
-        );
-      })}
+      <p>
+        <strong> Definition:</strong> {props.meaning.definition}
+        {props.meaning.example && (
+          <>
+            <br />
+            <em>
+              <strong>Example:</strong> {props.meaning.example}
+            </em>
+          </>
+        )}
+      </p>
+      {props.meaning.synonyms && props.meaning.synonyms.length > 0 && (
+        <p>
+          <strong>Synonyms:</strong> {props.meaning.synonyms.join(", ")}
+        </p>
+      )}
+      {props.meaning.antonyms && props.meaning.antonyms.length > 0 && (
+        <p>
+          <strong>Antonyms:</strong> {props.meaning.antonyms.join(", ")}
+        </p>
+      )}
     </div>
   );
 }

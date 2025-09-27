@@ -8,7 +8,11 @@ export default function Dictionary() {
   let [results, setResults] = useState(null);
 
   function handleResponse(response) {
-    setResults(response.data.meanings[0]);
+    setResults({
+      word: response.data.word,
+      phonetic: response.data.phonetic,
+      meanings: response.data.meanings,
+    });
   }
   function search(event) {
     event.preventDefault();
