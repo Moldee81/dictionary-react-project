@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Dictionary.css";
 import Results from "./Results";
+import TypingEffect from "./TypingEffect";
 
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
@@ -26,8 +27,11 @@ export default function Dictionary() {
   }
   return (
     <div className="Dictionary">
+      <TypingEffect />
       <form onSubmit={search}>
         <input type="search" onChange={handleKeywordChange} />
+        <hr />
+        <h7 class="suggestion">ie: horizon, sunset,yoga </h7>
       </form>
       <Results results={results} />
     </div>

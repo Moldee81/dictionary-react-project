@@ -1,8 +1,13 @@
 .initiator {
   margin-top: 10px;
-  color: rgb(101, 217, 217);
+  color: rgb(26, 190, 190);
   margin-bottom: 15px;
+  font-size: 26px;
+  font-weight: 600;
 }
 .phonetic {
-  color: rgb(242, 110, 132);
+  color: rgb(227, 67, 93);
+}
+.Results {
+  margin: auto 20px;
 }
