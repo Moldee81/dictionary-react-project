@@ -23,23 +23,21 @@ export default function Results(props) {
   return (
     <div className="Results">
       <section>
-        <h2 className="initiator">{props.results.word}</h2>
-        <h3 className="phonetic mt-4 mb-4">
-          <strong>Phonetic: </strong> {props.results.phonetic}
-        </h3>
-        {Array.isArray(props.results.meanings) &&
-        props.results.meanings.length > 0 ? (
-          props.results.meanings.map(function (meaning, index) {
-            return (
-              <section>
-                <div key={index}>
-                  <Meaning meaning={meaning} />
-                </div>
-              </section>
-            );
-          })
+        <h2 className="initiator">{currentResults.word}</h2>
+        {currentResults.phonetic && (
+          <h3 className="phonetic mt-4 mb-4">
+            <strong>Phonetic: </strong> {currentResults.phonetic}
+          </h3>
+        )}
+        {Array.isArray(currentResults.meanings) &&
+        currentResults.meanings.length > 0 ? (
+          currentResults.meanings.map((meaning, index) => (
+            <section key={`${currentResults.word}-${index}`}>
+              <Meaning meaning={meaning} />
+            </section>
+          ))
         ) : (
-          <div> No meanings found.</div>
+          <div className="text-center">No meanings found.</div> // Message for no meanings
         )}
       </section>
     </div>

@@ -12,7 +12,6 @@ function TypingEffect() {
         indexRef.current++;
       } else {
         clearInterval(timer); // Clear the interval when done
-        return; // Exit the function
       }
     };
 

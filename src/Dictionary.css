@@ -7,6 +7,10 @@ form input {
   border-radius: 5px;
   padding: 10px 10px;
   text-align: center;
+  width: 80%;
+  color: rgb(26, 190, 190);
+  font-size: 28px;
+  font-weight: 500;
 }
 form {
   background-color: beige;
@@ -18,9 +22,11 @@ form {
   margin: auto 20px;
   margin-bottom: 20px;
 }
-h7.suggestion {
+h6.suggestion {
   text-align: left;
   margin-top: 10px;
+  opacity: 0.7;
+  font-weight: 200;
 }
 .Dictionary section {
   background-color: beige;
