@@ -9,5 +9,6 @@
   color: rgb(227, 67, 93);
 }
 .Results {
-  margin: auto 20px;
+  margin: auto 0;
+  margin-bottom: 20px;
 }

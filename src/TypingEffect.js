@@ -1,25 +1,24 @@
-import React, { useState, useEffect, useRef } from "react";
+import Typewriter from "typewriter-effect";
 
-function TypingEffect() {
-  const text = "D  i c t i o n a r y";
-  const [displayed, setDisplayed] = useState(""); // Declare state for displayed text
-  const indexRef = useRef(0); // Create a ref for the index
-
-  useEffect(() => {
-    const type = () => {
-      if (indexRef.current < text.length) {
-        setDisplayed((prev) => prev + text.charAt(indexRef.current));
-        indexRef.current++;
-      } else {
-        clearInterval(timer); // Clear the interval when done
-      }
-    };
-
-    const timer = setInterval(type, 100); // Start typing effect
-    return () => clearInterval(timer); // Clean up interval on unmount
-  }, []);
-
-  return <h1 className="title">{displayed}</h1>;
+export default function TypingEffect() {
+  return (
+    <div>
+      <h1 className="title">
+        <Typewriter
+          options={{
+            cursor: "",
+            delay: 85,
+          }}
+          onInit={(typewriter) => {
+            typewriter
+              .typeString("D i c t i o n a r y")
+              .callFunction(() => {
+                console.log("String typed out!");
+              })
+              .start();
+          }}
+        />
+      </h1>
+    </div>
+  );
 }
-
-export default TypingEffect;
